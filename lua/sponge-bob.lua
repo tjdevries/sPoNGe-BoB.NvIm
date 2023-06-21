@@ -20,9 +20,9 @@ M.enable = function()
         local row, col = unpack(vim.api.nvim_win_get_cursor(0))
         local line_prefix = vim.api.nvim_buf_get_text(0, row - 1, 0, row - 1, col, {})[1]
         local last_char = string.reverse(line_prefix):gmatch "%a"()
-        local last_was_upper = last_char and last_char:upper() == last_char
+        local last_was_lower = last_char and last_char:lower() == last_char
 
-        if last_was_upper then
+        if last_was_lower then
           vim.v.char = vim.v.char:upper()
         else
           vim.v.char = vim.v.char:lower()
