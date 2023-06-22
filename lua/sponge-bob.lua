@@ -18,7 +18,11 @@ M.enable = function(alternate)
           return
         end
 
-        if upper and not alternate then
+        if alternative then
+          upper = not upper
+        end
+
+        if upper then
           vim.v.char = vim.v.char:upper()
         else
           vim.v.char = vim.v.char:lower()
@@ -36,7 +40,13 @@ M.disable = function()
 end
 
 M.toggle = function(val, alternate)
-  if val == nil then
+  if val == true and alternate == false then
+    print("sponge-bob: alternate must be set if val is set")
+    return M.toggle(val, not alternate)
+  end
+
+  if val == nil and alternate == nil then
+    print("sponge-bob: val or alternate must be set")
     return M.toggle(not enabled)
   end
 

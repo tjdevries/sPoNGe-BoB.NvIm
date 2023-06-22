@@ -1,13 +1,5 @@
-vim.api.nvim_create_user_command("OsPoNgEbObToGgLe", function(alternate)
-  require("sponge-bob").toggle(true, true)
-end, {})
-
-vim.api.nvim_create_user_command("OsPoNgEbObEnAbLe", function(alternate)
-  require("sponge-bob").toggle(true, true)
-end, {})
-
-vim.api.nvim_create_user_command("OsPoNgEbObDiSaBlE", function()
-  require("sponge-bob").toggle(false)
+vim.api.nvim_create_user_command("SpOnGeBoBsWaP", function()
+  require("sponge-bob").toggle(true, false)
 end, {})
 
 vim.api.nvim_create_user_command("SpOnGeBoBtOgGlE", function()
