@@ -41,12 +41,10 @@ end
 
 M.toggle = function(val, alternate)
   if val == true and alternate == false then
-    print("sponge-bob: alternate must be set if val is set")
     return M.toggle(val, not alternate)
   end
 
   if val == nil and alternate == nil then
-    print("sponge-bob: val or alternate must be set")
     return M.toggle(not enabled)
   end
 
