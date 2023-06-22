@@ -5,7 +5,7 @@ local group = vim.api.nvim_create_augroup("sponge-bob", {})
 local enabled = false
 local upper = false
 
-M.enable = function()
+M.enable = function(alternate)
   enabled = true
   vim.api.nvim_clear_autocmds { group = group }
   vim.api.nvim_create_autocmd("InsertCharPre", {
@@ -18,7 +18,7 @@ M.enable = function()
           return
         end
 
-        if upper then
+        if upper and not alternate then
           vim.v.char = vim.v.char:upper()
         else
           vim.v.char = vim.v.char:lower()
@@ -35,13 +35,13 @@ M.disable = function()
   vim.api.nvim_clear_autocmds { group = group }
 end
 
-M.toggle = function(val)
+M.toggle = function(val, alternate)
   if val == nil then
     return M.toggle(not enabled)
   end
 
   if val then
-    M.enable()
+    M.enable(alternate)
   else
     M.disable()
   end

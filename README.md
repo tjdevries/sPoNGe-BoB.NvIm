@@ -10,6 +10,9 @@ sO I FiNaLlY DiD iT.
 YoU CaN JuSt rUn `:SpOnGeBoBtOgGlE` tO ToGgLe iNsErT
 mOde fLiPpInG Of yOuR EvErY ChArAcTeR.
 
+yOu cAn aLsO RuN `:sPoNgEbObToGgLe` To tOgGlE FlIpPiNg
+tHe oThEr wAy aRoUnD.
+
 PlEaSe eNjOy, AnD DoN'T FOrGeT To lEaVe a sTaR fOr
 SuCh iNnOvAtIvE PlUgInS.
 
